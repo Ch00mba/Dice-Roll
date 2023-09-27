@@ -12,15 +12,18 @@
 }
 
 .dice-dot {
+  --top: 0%;
+  --left: 0%;
+  
   width: 15px;
   height: 15px;
   background-color: #000000;
   border-radius: 50%;
 
   position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translateX(-50%) translateY(-50%);
+  top: var(--top);
+  left: var(--left);
+  transform: translateX(calc(var(--left) * -1)) translateY(calc(var(--top) * -1));
 }
 
 .btn-roll-dice {
